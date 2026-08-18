@@ -7,6 +7,8 @@ crítica que indique detener el gasto publicitario.
 
 Prototipo construido para el **CoderCup AI** de Coderhouse.
 
+🎥 [Video demo](media/video_demo.mp4) — problema, arquitectura y uso en menos de 2 minutos.
+
 Documentación completa en [`docs/`](docs/):
 [`README_Centinela_de_Inversion.md`](docs/README_Centinela_de_Inversion.md) ·
 [`ADR_001_Centinela_de_Inversion.md`](docs/ADR_001_Centinela_de_Inversion.md) ·

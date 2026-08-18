@@ -206,7 +206,7 @@ El costo esperado de esta verificación es mínimo (fracciones de centavo por co
 | Entregable pedido | Dónde está |
 |---|---|
 | Proyecto andando: link o acceso | [github.com/mmolina-uxploit/centinela-de-inversion](https://github.com/mmolina-uxploit/centinela-de-inversion) — público, clonable y ejecutable sin API key vía `npm run dev:dry` (Sección 7.2, punto 2) |
-| Video demo (problema / cómo / uso) | A cargo del autor, fuera del repositorio |
+| Video demo (problema / cómo / uso) | [`media/video_demo.mp4`](../media/video_demo.mp4) |
 | Documentación técnica completa | Este informe, más [`ADR_001`](ADR_001_Centinela_de_Inversion.md), [`ADR_002`](ADR_002_motor_cognitivo_anthropic.md), y [`README.md`](../README.md) |
 
 ---
