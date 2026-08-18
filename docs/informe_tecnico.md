@@ -163,7 +163,13 @@ Se diseñó e implementó una arquitectura de contención de dos capas para perm
 
 ## 7. Guía de evaluación técnica
 
-Esta sección está dirigida a quien evalúe el proyecto y necesite un criterio explícito para interpretar qué significa el estado de verificación reportado en la Sección 4. El criterio de evaluación que enmarca esta sección no es "¿está el proyecto 100% técnicamente completo?" sino uno más apropiado para un prototipo de una semana: **¿el diseño resuelve el problema real de forma correcta y honesta, dentro del alcance que declaró?** Un prototipo con una pieza declarada como "pendiente" es fácil de subvalorar por dos lecturas erróneas simétricas — conviene descartar ambas antes de puntuar.
+Esta sección está dirigida al jurado de CoderCup AI (Coderhouse), y a cualquier evaluador técnico que la lea con el mismo criterio. La consigna del desafío pide explícitamente que "el problema sea genuino y la solución funcione" — no que el proyecto esté 100% técnicamente completo. Esta sección aplica ese mismo criterio, con un nivel de detalle mayor al que cabe en un video de dos minutos.
+
+### 7.0 Sobre "problema genuino": qué es real en este proyecto y qué es de ejemplo
+
+El problema que resuelve Centinela de Inversión —presupuesto publicitario financiando tráfico hacia productos sin stock— es un problema real y documentado de e-commerce, no inventado para la ocasión (Sección 1.1). Lo que es de ejemplo, y se declara como tal en todo momento en este proyecto, son los **datos** sobre los que corre: `src/mocks.ts` contiene valores de inventario y campaña escritos a mano, no observaciones de una tienda Shopify ni de una cuenta de Meta Ads reales (Sección 1.3). El sistema nunca operó sobre presupuesto real ni evitó una pérdida real — eso sería una afirmación no sostenida por evidencia, y este informe explícitamente no la hace (Sección 5.2).
+
+La distinción que importa para evaluar "genuino" no es *"¿los números de la demo son reales?"* —no lo son, y decir lo contrario sería deshonesto— sino *"¿la arquitectura que resuelve el problema funcionaría igual con datos reales, sin cambios de diseño?"* La respuesta a esa segunda pregunta es sí: `ShopifyInventorySnapshot` y `MetaAdsCampaignSnapshot` (`src/mocks.ts`) están tipados para calzar con la forma real de esas APIs, y el propio código lo documenta como el siguiente paso natural, no como trabajo ya hecho.
 
 ### 7.1 Qué NO se debería concluir del estado actual
 
@@ -194,6 +200,14 @@ npm run dev
 ```
 
 El costo esperado de esta verificación es mínimo (fracciones de centavo por corrida de los cuatro escenarios — ver [`README.md`](../README.md), sección "Correr en modo real"), y queda enteramente a cargo de quien decida ejecutarla, nunca del autor original.
+
+### 7.4 Mapeo contra los entregables de la consigna
+
+| Entregable pedido | Dónde está |
+|---|---|
+| Proyecto andando: link o acceso | [github.com/mmolina-uxploit/centinela-de-inversion](https://github.com/mmolina-uxploit/centinela-de-inversion) — público, clonable y ejecutable sin API key vía `npm run dev:dry` (Sección 7.2, punto 2) |
+| Video demo (problema / cómo / uso) | Guion en [`docs/guion_video.md`](guion_video.md); grabación a cargo del autor |
+| Documentación técnica completa | Este informe, más [`ADR_001`](ADR_001_Centinela_de_Inversion.md), [`ADR_002`](ADR_002_motor_cognitivo_anthropic.md), y [`README.md`](../README.md) |
 
 ---
 
