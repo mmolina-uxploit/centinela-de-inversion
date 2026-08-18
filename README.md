@@ -115,7 +115,7 @@ Shopify ni de una cuenta de Meta Ads reales (ver
 > tocar `.env`.
 
 ```bash
-git clone <url-del-repo>
+git clone https://github.com/mmolina-uxploit/centinela-de-inversion.git
 cd centinela-de-inversion
 npm install
 npm run dev:dry

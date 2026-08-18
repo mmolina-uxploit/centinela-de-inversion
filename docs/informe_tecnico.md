@@ -185,7 +185,7 @@ Estos tres puntos son, en conjunto, la respuesta a la pregunta de valor plantead
 Quien evalúe puede completar la Fase D de forma independiente y sin costo para el autor del proyecto, usando su propia clave de API:
 
 ```bash
-git clone <url-del-repo>
+git clone https://github.com/mmolina-uxploit/centinela-de-inversion.git
 cd centinela-de-inversion
 npm install
 cp .env.example .env
